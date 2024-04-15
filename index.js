@@ -2,24 +2,289 @@ const pageComponent = [
   {
     image: "./assets/screen-shots/header.png",
     title: "Header",
-    html: "section",
+    html: `   <section class="nav__section">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container flex justify-content-between">
+        <a class="navbar-brand col-md-6" href="#">
+          <img src="./assets/Logo-01.svg" alt="" />
+          <span>Hype</span>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navTogg"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="ToggleDiv" id="ToggleDiv">
+      <div class="openToggle" id="">
+        <div class="closeToggle">
+          <button id="closeButton">X</button>
+        </div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Reviews</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>`,
   },
-  { image: "./assets/screen-shots/hero.png", title: "Hero", html: "section" },
+
+  {
+    image: "./assets/screen-shots/hero.png",
+    title: "Hero",
+    html: `   <section class="heroSection">
+  <div class="container row m-auto">
+    <div class="col-sm-12 col-md-6">
+      <h1>Social media posts that get clicks!</h1>
+      <p>
+        Driving traffic to your site just got easier. Get compelling SEO
+        blog and social media posts handcrafted with love.
+      </p>
+      <button class="heroBtn">
+        Book a call <i class="bi bi-arrow-right"></i>
+      </button>
+    </div>
+    <div class="heroImg col-sm-12 col-md-6">
+      <img src="./assets/using-social-media.svg" alt="" />
+    </div>
+  </div>
+</section>`,
+  },
+
   {
     image: "./assets/screen-shots/service.png",
     title: "Service",
-    html: "section",
+    html: `    <section class="help">
+    <div class="container">
+      <h1>How We Can Help You?</h1>
+      <p>
+        We create compelling SEO blog post & social media Content that drives
+        the right people to your site.
+      </p>
+      <div class="mt-5 d-lg-flex d-md-flex justify-content-evenly">
+        <div class="col-md-4 col-sm-12">
+          <img src="./assets/app-launch.svg" alt="" />
+          <h3>Tech Optimization</h3>
+          <li>
+            A list of technical changes and <br />
+            optimizations that help your site <br />
+            meet the requirements set by search <br />
+            engines like Google.
+          </li>
+        </div>
+        <div class="col-md-4 col-sm-12">
+          <img src="./assets/communication.svg" alt="" />
+          <h3>Social Media</h3>
+          <li>
+            Every story we craft for your social <br />
+            media channels serves a purpose and <br />
+            is planned out to meet your business <br />
+            requirements.
+          </li>
+        </div>
+
+        <div class="col-md-4 col-sm-12">
+          <img src="./assets/creator-filming.svg" alt="" />
+          <h3>Content Strategy</h3>
+          <li>
+            Our team of content writers and <br />
+            SMEs create compelling content <br />
+            through blog posts to drive Traffic <br />
+            and Conversions.
+          </li>
+        </div>
+      </div>
+    </div>
+  </section>`,
   },
-  { image: "./assets/screen-shots/cta.png", title: "CTA", html: "section" },
+  {
+    image: "./assets/screen-shots/cta.png",
+    title: "CTA",
+    html: ` <section class="testimonials">
+  <div class="container row m-auto">
+    <div class="col-sm-12 my-5 col-md-6">
+      <img class="peopleDiv" src="./assets/people.jpg" alt="" />
+    </div>
+    <div class="content my-5 pl-md-5 col-sm-12 col-md-6">
+      <h2>Need help creating high quality content?</h2>
+      <p>We're known for Content Strategy and Content Creation.</p>
+      <p>
+        Get super rich content experience in blog & social media post, drive
+        traffic and improve outcomes by as much as 59%. Increase search
+        exposure, build brand awareness and attract top-of-funnel visitors
+        with blog posts created by our in-house team of content marketers.
+      </p>
+      <p>
+        We develop engaging, high-quality content that's personalized for
+        your target audience and optimized for search engines.
+      </p>
+
+      <button>View Testimonials <i class="bi bi-arrow-right"></i></button>
+    </div>
+  </div>
+</section>`,
+  },
   {
     image: "./assets/screen-shots/testimonials.png",
     title: "Testimonials",
-    html: "section",
+    html: `
+    <section class="clients">
+      <div class="container">
+        <h1>What Our Clients Are Saying</h1>
+        <div class="row clientDiv">
+          <div class="profile col-sm-12 col-md-4">
+            <div class="proImg">
+              <img width="" src="./assets/man.jpg" alt="" />
+            </div>
+            <h4>Seren Singh</h4>
+            <span>Founder @Coiny</span>
+            <p>
+              Hype excels at creating industry content without needing to rely
+              on our internal expertise. The quality of their work just gets
+              better and better with each new deliverable.
+            </p>
+          </div>
+          <div class="profile col-sm-12 col-md-4">
+            <div class="proImg">
+              <img src="./assets/ade.jpg" alt="" />
+            </div>
+            <h4>Adelina Petty</h4>
+            <span>Founder @Drop</span>
+            <p>
+              Hype shows creativity not just in the project, but in the process
+              itself. There is a synergy between our companies that's almost
+              cultural.
+            </p>
+          </div>
+          <div class="profile col-sm-12 col-md-4">
+            <div class="proImg">
+              <img src="./assets/mills.jpg" alt="" />
+            </div>
+            <h4>Catherine Mills</h4>
+            <span>Founder @Execilio</span>
+            <p>
+              The Hype team went above and beyond our expectations. They helped
+              us grow our Twitter from 0 to 10k followers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>`,
   },
-  { image: "./assets/screen-shots/plans.png", title: "Plans", html: "section" },
+  {
+    image: "./assets/screen-shots/plans.png",
+    title: "Plans",
+    html: `<section class="plans">
+  <div class="container">
+    <h1>Plans for every need</h1>
+    <p>You can cancel anytime.</p>
+    <div class="plansDiv row">
+      <div class="starter col-sm-12 col-md-4">
+        <h2>Starter</h2>
+        <p>$249/month</p>
+        <button class="heroBtn">
+          Let's talk <i class="bi bi-arrow-right"></i>
+        </button>
+        <div class="planList">
+          <li>10 Blog Articles</li>
+          <li>Keyword Research</li>
+          <li>700+ words</li>
+          <li>SEO friendly</li>
+        </div>
+      </div>
+      <div class="starter col-sm-12 col-md-4">
+        <h2>Business</h2>
+        <p>$449/month</p>
+        <button class="heroBtn">
+          Let's talk <i class="bi bi-arrow-right"></i>
+        </button>
+        <div class="planList">
+          <li>20 Blog Articles</li>
+          <li>Keyword Research</li>
+          <li>1000+ words</li>
+          <li>SEO friendly</li>
+          <li>Content Marketing</li>
+          <li>Traffic Assurance</li>
+          <li>24*7 Chat Support</li>
+        </div>
+      </div>
+      <div class="starter col-sm-12 col-md-4">
+        <h2>Custom</h2>
+        <p>Get a quote</p>
+        <button class="heroBtn">
+          Let's talk <i class="bi bi-arrow-right"></i>
+        </button>
+        <div class="planList">
+          <li>For all your custom needs</li>
+          <li>Social Media Content (starting from $200)</li>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>`,
+  },
   {
     image: "./assets/screen-shots/counter.png",
     title: "Counter",
-    html: "section",
+    html: `<section class="nombers">
+    <div class="container">
+      <h1>Some Numbers of Excellence</h1>
+      <div class="row mt-5">
+        <div class="digit col-sm-12 col-md-3">
+          <h2 class="orange">50+</h2>
+          <span>Happy clients</span>
+        </div>
+        <div class="digit col-sm-12 col-md-3">
+          <h2>100+</h2>
+          <span>Projects delivered</span>
+        </div>
+        <div class="digit col-sm-12 col-md-3">
+          <h2 class="orange">20+</h2>
+          <span>Experts</span>
+        </div>
+        <div class="digit col-sm-12 col-md-3">
+          <h2>3+</h2>
+          <span>Years of experience</span>
+        </div>
+      </div>
+    </div>
+  </section>`,
   },
 ];
