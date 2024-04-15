@@ -1,280 +1,466 @@
-@import url('https://fonts.cdnfonts.com/css/barlow-condensed-2');
-@import url('https://fonts.cdnfonts.com/css/work-sans');
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Work Sans', sans-serif;
+@import url("https://fonts.cdnfonts.com/css/barlow");
+@import url("https://fonts.cdnfonts.com/css/work-sans");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    /* font-family: 'Barlow Condensed', sans-serif !important; */
+body {
+  font-family: "Barlow Condensed", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 
-:root{
-    --black: #171717;
-    --litegray: #FAFAFA;
-    --ash: #E5E5E5;
-    --gold: #FBBF24;
-    --orange: #F97316;
+:root {
+  --black: #171717;
+  --litegray: #fafafa;
+  --ash: #e5e5e5;
+  --gold: #fbbf24;
+  --orange: #f97316;
 }
 
-.navbar{
-    padding: 30px 60px;
+/* ELEMENTS... */
+
+img,
+div,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+section,
+nav,
+body {
+  width: 100%;
 }
 
-.navbar-brand span{
-    font-size: 20px;
-    font-weight: 600;
+section {
+  padding: 5rem 1rem;
 }
 
-
-.navbar-nav .nav-link{
-    color: var(--black) ;
-    font-size: 16px;
-    padding: 0 22px !important;
-    font-weight: 500;
+.nav__section {
+  padding: 1rem;
+}
+p,
+li {
+  font-family: "Work Sans", sans-serif;
 }
 
-
-/* .openToggle{
-    display: none;
-    width: 500px;
-    height: 160px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgb(159, 202, 228);
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-} */
-
-/* .openToggle li{
-    margin: 5px;
-} */
-
-
-
-
-.heroSection{
-    margin: 90px 0;
-    padding: 30px 60px;
+nav {
+  padding: 1.2rem !important;
 }
 
-.heroSection h1{
-    margin-top: 20px;
-    font-size: 60px;
-    font-weight: 700;
-    color: var(--black);
+.navbar-brand img {
+  margin-top: -5px;
+  width: 25px;
 }
 
-.heroSection p{
-    font-size: 16px;
-    color: var(--black);
-    letter-spacing: 1px;
-    list-style: 2px;
+.navbar-brand span {
+  font-size: 20px;
+  font-weight: 600;
 }
 
-.heroBtn{
-    padding: 10px 30px;
+.navbar-nav .nav-link {
+  color: var(--black);
+  font-size: 16px;
+  padding: 0 22px !important;
+  font-weight: 500;
+}
+
+.ToggleDiv {
+  width: 100%;
+  /* z-index: 10; */
+  top: 1%;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.openToggle {
+  width: 300px;
+  height: 200px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+.closeToggle {
+  height: 50px;
+}
+
+.openToggle li {
+  margin: 5px;
+}
+
+.openToggle button {
+  position: absolute;
+  right: 2%;
+  margin: 10px 15px;
+  padding-right: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.heroSection h1 {
+  margin-top: 2rem;
+  font-size: 60px;
+  font-weight: 800;
+  color: var(--black);
+  font-family: "Barlow", sans-serif;
+  width: 72%;
+}
+
+.heroSection p {
+  margin: 4rem 0;
+  font-size: 16px;
+  color: var(--black);
+  letter-spacing: 1px;
+  list-style: 2px;
+}
+
+.heroBtn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #fbbf24;
+  font-weight: 500;
+}
+
+.heroBtn:hover {
+  background-color: #e4a913;
+}
+
+.help {
+  background-color: var(--litegray);
+}
+
+.help h1 {
+  margin-top: 5rem;
+  text-align: center;
+  font-weight: 800;
+  font-size: 32px;
+  /* font-family: 'Barlow Condensed', sans-serif ; */
+}
+
+.help p {
+  text-align: center;
+  color: var(--black);
+}
+
+.help li {
+  list-style-type: none;
+  color: var(--black);
+}
+
+.help h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+.help img {
+  margin: 2rem 0;
+  width: 45%;
+}
+
+.testimonials {
+  padding: 10rem 0 2rem 0;
+  background-color: var(--litegray);
+}
+
+.testimonials h2 {
+  font-weight: 800;
+  font-size: 30px;
+  color: var(--black);
+  font-family: "Barlow Condensed", sans-serif;
+}
+
+.peopleDiv {
+  width: 100%;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content p {
+  color: var(--black);
+}
+
+.content button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--ash);
+  margin-top: 25px;
+}
+
+.clients {
+  background-color: var(--litegray);
+}
+
+.clients h1 {
+  font-weight: 800;
+  color: var(--black);
+}
+
+.proImg {
+  margin-top: 2rem;
+}
+
+.proImg img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.clients p {
+  color: var(--black);
+  margin-top: 1rem;
+}
+
+.clients span {
+  color: var(--black);
+  font-weight: 500;
+}
+
+.clients h4 {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.plans {
+  margin: 4rem 0;
+}
+
+.plans h1 {
+  font-weight: 800;
+  color: var(--black);
+  font-family: "Barlow Condensed", sans-serif;
+  /* font-size: 34px; */
+}
+
+.plans h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.plans p {
+  margin-top: 8px;
+  color: var(--black);
+}
+
+.planList {
+  margin-top: 50px;
+}
+
+.planList li {
+  margin: 15px 0;
+  letter-spacing: 1px;
+}
+
+.nombers {
+  background-color: #262626;
+}
+
+.nombers h1 {
+  padding: 10px 0;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 32px;
+}
+
+.digit {
+  margin-bottom: 3rem;
+}
+
+.digit h2 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+.digit span {
+  color: var(--litegray);
+}
+
+.digit .orange {
+  color: var(--orange);
+}
+
+.socials img {
+  width: 30%;
+}
+
+.socials h1 {
+  text-align: center;
+  font-weight: 800;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 30px;
+}
+
+.socials p {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  section {
+    padding: 3rem 1rem;
+  }
+  .navbar button {
     border: none;
-    border-radius: 10px;
-    background-color: #FBBF24;
-}
+  }
 
-.heroBtn:hover{
-    background-color: #e4a913;
-}
+  .heroSection button {
+    margin-top: 15px;
+  }
 
-.heroImg img{
+  .heroSection h1 {
+    font-size: 36px;
     width: 80%;
-}
+  }
 
-.help{
-    padding: 30px 60px;
-    background-color: var(--litegray);
-}
+  .heroSection p {
+    margin-top: 1rem;
+  }
 
-.help h1{
-    margin-top: 5rem;
-    text-align: center;
-    font-weight: 700;
-    font-size: 42px;
-    font-family: 'Barlow Condensed', sans-serif !important;
+  .heroImg img {
+    margin-top: 4rem;
+  }
 
-}
+  .profile {
+    margin-top: 3rem;
+  }
 
-.help p{
-    text-align: center;
-    color: var(--black);
-}
-
-.help li{
-    list-style-type: none;
-    color: var(--black);
-}
-
-.help h3{
-    font-size: 24px;
-   font-weight: 700;
-   color: var(--black);
-}
-
-.help img{
-    margin: 10px 0;
-    width: 45%;
-}
-
-.testimonials{
-    padding: 10px 60px;
-    background-color: var(--litegray);
-}
-
-.testimonials h2{
-    font-weight: 700;
-    font-size: 30px;
-    color: var(--black);
-}
-
-.peopleDiv, .content{
-    margin-top: 15rem;
-}
-
-.peopleDiv{
-    width: 500px;
-    height: 380px;
-    border-radius: 15px;
-    background: url(./assets/people.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.content p{
-    color: var(--black);
-}
-
-.content button{
-    padding: 10px 30px;
-    border: none;
-    border-radius: 10px;
-    background-color: var(--ash);
-    margin-top: 25px;
-}
-
-.clients{
-    padding: 40px 60px;
-    background-color: var(--litegray);
-}
-
-.clients h1{
-    margin-top: 12rem;
-    font-weight: 700;
-    color: var(--black);
-}
-
-.clientDiv{
-    margin: 60px 0;
-}
-
-.proImg img{
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.clients p{
-    color: var(--black);
-}
-
-.plans{
-    margin: 10rem 0;
-    padding: 0 60px;
-}
-
-.plans h1{
-    font-weight: 700;
-    color: var(--black);
-}
-
-.plans h2{
+  .help h1 {
     font-size: 26px;
-    font-weight: 700;
+  }
+
+  .help h3 {
+    font-size: 22px;
+  }
+
+  .help img {
+    /* margin-top: 2rem; */
+    letter-spacing: 0.1px;
+    width: 80%;
+  }
+
+  .testimonials H2 {
+    font-size: 24px;
+  }
+
+  .plansDiv h2 {
+    margin-top: 2rem;
+  }
+
+  .socials img {
+    width: 90%;
+  }
 }
 
-.plans p{
-    margin-top: 8px;
-    color: var(--black);
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .heroSection h1 {
+    font-size: 36px;
+    width: 80%;
+  }
 }
 
-.planList{
-    margin-top: 50px;
+/* @media only screen and (max-width: 992px){
+    .heroSection h1, h1{
+        width: 100%;
+        font-size: 48px;
+    }
+
+    h2{
+        font-size: 36px;
+    }
+
+    .help{
+        padding-inline: 1rem;
+    }
+
+    h3{
+        font-size: 24px;
+    }
+
+
+
+    
+} */
+
+/* @media only screen and (max-width: 768px){
+    h1{
+        font-size: 36px;
+    }
+    h2{
+        font-size: 24px;
+    }
+
+    h3{
+        font-size: 18px;
+    }
+
+    .navbar{
+        padding: 10px 20px ;
+    }
+
+    .heroSection{
+        padding: 30px 20px;
+    }
+
+    .heroImg img{
+        width: 150%;
+    }
+
+    .help{
+        padding: 20px;
+    }
+
+    .help img{
+        width: 60%;
+    }
+
+    .testimonials{
+        padding: 0 25px;
+
+    }
+
+    .clients{
+        padding: 0 20px;
+    }
+
+    .plans{
+        padding: 0 30px;
+    }
+
+    .nombers{
+        padding: 7rem 1rem;
+    }
+
+    .ToggleDiv{
+        display: none;
+    }
+
 }
+ */
 
-.planList li{
-    margin: 15px 0;
-    letter-spacing: 1px;
-}
-
-.nombers{
-    padding: 7rem 5rem;
-    background-color: #262626;
-}
-
-.nombers h1{
-    padding: 10px 0;
-    color: #ffffff;
-    font-weight: 700;
-}
-
-.digit{
-    margin-top: 30px;
-}
-
-.digit h2{
-    font-size: 38px;
-    font-weight: 700;
-    color: var(--gold);
-}
-
-.digit span{
-    color: var(--litegray);
-}
-
-.digit .orange{
-    color: var(--orange);
-}
-
-.socials{
-    margin: 8rem 0;
-}
-
-.socials img{
-    margin: 20px 0;
-    width: 38%;
-}
-
-
-.socials h1{
-    text-align: center;
-    font-weight: 700;
-}
-
-.socials p{
-    margin-top: 20px;
-    text-align: center;
-}
-
-
-
-
-
-
-@media only screen and (max-width: 480px){
+/* @media only screen and (max-width: 480px){
     .heroSection button{
         margin-top: 15px;
     }
 
     .heroSection h1{
-        font-size: 48px;
+        font-size: 28px;
+        width: 90%;
     }
 
     .heroSection{
@@ -303,11 +489,6 @@ body{
     .testimonials{
         padding: 0 20px;
         gap: 0;
-    }
-
-    .peopleDiv{
-        width: 270px;
-        height: 230px;
     }
 
     .content{
@@ -348,51 +529,4 @@ body{
 
 
     
-}
-
-
-
-@media only screen and (max-width: 768px){
-    .navbar{
-        padding: 10px 20px ;
-    }
-
-    .heroSection{
-        padding: 30px 20px;
-    }
-
-    .heroImg img{
-        width: 100%;
-    }
-
-    .help{
-        padding: 20px;
-    }
-
-    .help img{
-        width: 60%;
-    }
-
-    .testimonials{
-        padding: 0 25px;
-
-    }
-
-    .peopleDiv{
-        width: 380px;
-        height: 310px;
-    }
-
-    .clients{
-        padding: 0 20px;
-    }
-
-    .plans{
-        padding: 0 30px;
-    }
-
-    .nombers{
-        padding: 7rem 1rem;
-    }
-
-}
+} */
